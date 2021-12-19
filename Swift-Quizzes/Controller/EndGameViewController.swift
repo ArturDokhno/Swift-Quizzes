@@ -8,16 +8,20 @@
 import UIKit
 
 class EndGameViewController: UIViewController {
-
+    
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var textLable: UILabel!
     
     var text = ""
+    var resultText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         textLable.text = text
+        resultLabel.text = resultText
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
 }

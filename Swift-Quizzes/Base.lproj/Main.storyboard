@@ -33,7 +33,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldB-Qi-yX0"/>
-                                    <segue destination="BWL-Dh-Pwc" kind="show" id="IKp-U8-AAw"/>
+                                    <segue destination="BWL-Dh-Pwc" kind="show" identifier="playGame" id="IKp-U8-AAw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,14 +168,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrt-Xv-Ywi">
+                                <rect key="frame" x="145.5" y="513" width="123" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать заново"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihc-8y-Lbb">
+                                <rect key="frame" x="156.5" y="569" width="101" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Результаты"/>
+                                <connections>
+                                    <segue destination="ZxH-IC-HgO" kind="show" id="hAr-Fh-cOz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jdj-7V-RlG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="top" secondItem="jdj-7V-RlG" secondAttribute="top" constant="200" id="7Vp-aq-Pkz"/>
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="leading" secondItem="jdj-7V-RlG" secondAttribute="leading" constant="50" id="8Lt-iM-rJJ"/>
+                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="JsB-lN-bFe"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerY" secondItem="VmZ-jz-F22" secondAttribute="centerY" id="XjR-GZ-LF0"/>
                             <constraint firstItem="jdj-7V-RlG" firstAttribute="trailing" secondItem="zdJ-HF-xop" secondAttribute="trailing" constant="50" id="c5H-r8-ckP"/>
+                            <constraint firstItem="Wrt-Xv-Ywi" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="eLh-fa-c1d"/>
+                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="top" secondItem="Wrt-Xv-Ywi" secondAttribute="bottom" constant="25" id="gtr-dU-APq"/>
+                            <constraint firstItem="Wrt-Xv-Ywi" firstAttribute="top" secondItem="mkT-go-P5K" secondAttribute="bottom" constant="50" id="q1S-c4-3Eq"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="sHE-co-ISF"/>
                         </constraints>
                     </view>
@@ -186,11 +203,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U74-av-3Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693" y="84"/>
+            <point key="canvasLocation" x="2563.768115942029" y="83.705357142857139"/>
+        </scene>
+        <!--Results Table View Controller-->
+        <scene sceneID="gqQ-1B-jqC">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="ZxH-IC-HgO" customClass="ResultsTableViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="a3D-XE-sNx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" id="DKL-Xc-Djq">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DKL-Xc-Djq" id="9Fj-AY-N7n">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZxH-IC-HgO" id="XGv-BV-M07"/>
+                            <outlet property="delegate" destination="ZxH-IC-HgO" id="qgB-2x-yYx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="f9M-Li-Xys"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hx2-lx-4Dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3345" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JW2-GB-MjE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qm0-Yc-t4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RcF-WS-pRe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MJq-TD-GWC">
@@ -202,7 +249,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aIz-b4-L16"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qm0-Yc-t4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
         </scene>
