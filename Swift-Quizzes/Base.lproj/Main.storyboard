@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,13 +168,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrt-Xv-Ywi">
-                                <rect key="frame" x="145.5" y="513" width="123" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Начать заново"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihc-8y-Lbb">
-                                <rect key="frame" x="156.5" y="569" width="101" height="31"/>
+                                <rect key="frame" x="156.5" y="563" width="101" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Результаты"/>
                                 <connections>
@@ -188,11 +183,9 @@
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="top" secondItem="jdj-7V-RlG" secondAttribute="top" constant="200" id="7Vp-aq-Pkz"/>
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="leading" secondItem="jdj-7V-RlG" secondAttribute="leading" constant="50" id="8Lt-iM-rJJ"/>
                             <constraint firstItem="Ihc-8y-Lbb" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="JsB-lN-bFe"/>
+                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="top" secondItem="mkT-go-P5K" secondAttribute="bottom" constant="100" id="OXy-6p-n4v"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerY" secondItem="VmZ-jz-F22" secondAttribute="centerY" id="XjR-GZ-LF0"/>
                             <constraint firstItem="jdj-7V-RlG" firstAttribute="trailing" secondItem="zdJ-HF-xop" secondAttribute="trailing" constant="50" id="c5H-r8-ckP"/>
-                            <constraint firstItem="Wrt-Xv-Ywi" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="eLh-fa-c1d"/>
-                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="top" secondItem="Wrt-Xv-Ywi" secondAttribute="bottom" constant="25" id="gtr-dU-APq"/>
-                            <constraint firstItem="Wrt-Xv-Ywi" firstAttribute="top" secondItem="mkT-go-P5K" secondAttribute="bottom" constant="50" id="q1S-c4-3Eq"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="sHE-co-ISF"/>
                         </constraints>
                     </view>

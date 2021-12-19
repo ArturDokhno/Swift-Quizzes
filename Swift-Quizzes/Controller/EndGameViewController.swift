@@ -8,7 +8,7 @@
 import UIKit
 
 class EndGameViewController: UIViewController {
-    
+
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var textLable: UILabel!
     
@@ -17,7 +17,7 @@ class EndGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         textLable.text = text
         resultLabel.text = resultText
         

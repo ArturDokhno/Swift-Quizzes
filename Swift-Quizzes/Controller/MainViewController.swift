@@ -8,12 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationItem.setHidesBackButton(true, animated: false)
-    }
+
     
     @IBAction func playGame(_ sender: Any) {
         let session = GameSession()
