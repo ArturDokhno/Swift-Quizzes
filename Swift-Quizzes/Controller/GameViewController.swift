@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
         if answerNumber == 0 {
             createQuestions()
         } else {
-            NSLog("Wrong")
+            pushEndGameVC()
         }
     }
     
@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
         if answerNumber == 1{
             createQuestions()
         } else {
-            NSLog("Wrong")
+            pushEndGameVC()
         }
     }
     
@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         if answerNumber == 2 {
             createQuestions()
         } else {
-            NSLog("Wrong")
+            pushEndGameVC()
         }
     }
     
@@ -49,7 +49,7 @@ class GameViewController: UIViewController {
         if answerNumber == 3 {
             createQuestions()
         } else {
-            NSLog("Wrong")
+            pushEndGameVC()
         }
     }
     
@@ -67,8 +67,20 @@ class GameViewController: UIViewController {
             gameQuestions.remove(at: questionNumber)
             
         } else {
-            NSLog("Done!")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(
+                withIdentifier: "EndGameViewController") as! EndGameViewController
+            vc.text = "Поздравляю вы выиграли!"
+            self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+    func pushEndGameVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(
+            withIdentifier: "EndGameViewController") as! EndGameViewController
+        vc.text = "Вы проиграли!"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

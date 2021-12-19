@@ -19,7 +19,7 @@ var gameQuestions: [Question] = [questions1, questions2, questions3, questions4,
 
 var questions1 = Question(questions: "Возможно ли обьявление нескольких констант в одну сроку",
                           answers: ["Нет, каждая с новой строки",
-                                    "Да, черещ обратный слеш",
+                                    "Да, через обратный слеш",
                                     "Да, через запятую",
                                     "Да, через двоеточие"],
                           numbberOfAnswer: 2)

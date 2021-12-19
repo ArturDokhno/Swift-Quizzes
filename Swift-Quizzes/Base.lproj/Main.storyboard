@@ -151,13 +151,38 @@
         <!--End Game View Controller-->
         <scene sceneID="ZO3-oH-cqf">
             <objects>
-                <viewController id="foG-Hy-e8h" customClass="EndGameViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndGameViewController" id="foG-Hy-e8h" customClass="EndGameViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VmZ-jz-F22">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="textlable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdJ-HF-xop">
+                                <rect key="frame" x="50" y="244" width="314" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resultLable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkT-go-P5K">
+                                <rect key="frame" x="148" y="433" width="118.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jdj-7V-RlG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zdJ-HF-xop" firstAttribute="top" secondItem="jdj-7V-RlG" secondAttribute="top" constant="200" id="7Vp-aq-Pkz"/>
+                            <constraint firstItem="zdJ-HF-xop" firstAttribute="leading" secondItem="jdj-7V-RlG" secondAttribute="leading" constant="50" id="8Lt-iM-rJJ"/>
+                            <constraint firstItem="mkT-go-P5K" firstAttribute="centerY" secondItem="VmZ-jz-F22" secondAttribute="centerY" id="XjR-GZ-LF0"/>
+                            <constraint firstItem="jdj-7V-RlG" firstAttribute="trailing" secondItem="zdJ-HF-xop" secondAttribute="trailing" constant="50" id="c5H-r8-ckP"/>
+                            <constraint firstItem="mkT-go-P5K" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="sHE-co-ISF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="mkT-go-P5K" id="3lY-ex-yuM"/>
+                        <outlet property="textLable" destination="zdJ-HF-xop" id="yxF-gv-SYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U74-av-3Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
