@@ -15,6 +15,9 @@ class GameViewController: UIViewController {
     
     weak var gameDelegate: GameDelegate?
     
+    var numberOfQuestionStrategy: SequenceOfQuestions = RandomQuestions()
+    var provider = Game.Shared.questionsProvider
+    
     var questionNumber = Int()
     var rightAnswerNumber = Int()
     var rightAnswerCount = 0
@@ -81,16 +84,15 @@ class GameViewController: UIViewController {
     
     func createQuestions() {
         
-        if  gameQuestions.count > 0 {
-            questionNumber = 0
-            questionlabel.text = gameQuestions[questionNumber].questions
-            rightAnswerNumber = gameQuestions[questionNumber].numbberOfAnswer
-            
-            for i in 0..<button.count {
-                button[i].setTitle(gameQuestions[questionNumber].answers[i], for: UIControl.State.normal)
+        if provider.getRemainQuestionsCount() > 0 {
+            questionNumber = numberOfQuestionStrategy.getQuestionsNumber(array: provider.questions)
+            questionlabel.text = provider.getQuestionsText(number: questionNumber)
+            rightAnswerNumber = provider.getRightAnswerNumber(number: questionNumber)
+            for index in 0..<button.count {
+                button[index].setTitle(provider.getAnswerText(index: index, number: questionNumber), for: UIControl.State.normal)
             }
             
-            gameQuestions.remove(at: questionNumber)
+            provider.questions.remove(at: questionNumber)
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

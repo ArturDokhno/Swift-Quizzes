@@ -8,10 +8,65 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Setting Table View Controller-->
+        <scene sceneID="gkW-pm-d6k">
+            <objects>
+                <tableViewController id="Cfj-J2-fCX" customClass="SettingTableViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wmF-pc-Jns">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="B9b-li-VGu">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="44.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B9b-li-VGu" id="LVg-T6-gAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросы не по порядку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-Ad-ylN">
+                                            <rect key="frame" x="20" y="12" width="189" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFU-fG-wIA">
+                                            <rect key="frame" x="345" y="6.5" width="51" height="31.5"/>
+                                            <connections>
+                                                <action selector="changeDifficulty:" destination="Cfj-J2-fCX" eventType="valueChanged" id="weY-h3-ZUz"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Arf-Ad-ylN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LVg-T6-gAQ" secondAttribute="leadingMargin" id="6n1-9I-Shn"/>
+                                        <constraint firstItem="eFU-fG-wIA" firstAttribute="centerY" secondItem="LVg-T6-gAQ" secondAttribute="centerY" id="DrC-18-jr8"/>
+                                        <constraint firstItem="Arf-Ad-ylN" firstAttribute="top" secondItem="LVg-T6-gAQ" secondAttribute="topMargin" constant="1" id="KtD-Xv-FM3"/>
+                                        <constraint firstItem="eFU-fG-wIA" firstAttribute="trailing" secondItem="LVg-T6-gAQ" secondAttribute="trailingMargin" id="j5D-es-xdK"/>
+                                        <constraint firstItem="eFU-fG-wIA" firstAttribute="top" secondItem="LVg-T6-gAQ" secondAttribute="topMargin" constant="-4.5" id="lRc-3e-rlP"/>
+                                        <constraint firstItem="Arf-Ad-ylN" firstAttribute="centerY" secondItem="LVg-T6-gAQ" secondAttribute="centerY" id="miS-K5-CY3"/>
+                                        <constraint firstItem="eFU-fG-wIA" firstAttribute="leading" secondItem="Arf-Ad-ylN" secondAttribute="trailing" constant="136" id="xmB-He-t8F"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cfj-J2-fCX" id="Zj7-gW-MxP"/>
+                            <outlet property="delegate" destination="Cfj-J2-fCX" id="cyp-wx-6cr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yTc-dC-wUb"/>
+                    <connections>
+                        <outlet property="difficultySwitch" destination="eFU-fG-wIA" id="A2r-3M-ChO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUo-YJ-Ps7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="-653"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MainViewController" customModule="Swift_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +101,13 @@
                             <constraint firstItem="siR-V8-mfR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vMd-7C-xvq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mIf-jM-GBL"/>
+                    <navigationItem key="navigationItem" id="mIf-jM-GBL">
+                        <barButtonItem key="leftBarButtonItem" title="Настройки" id="mQ6-yX-2D0">
+                            <connections>
+                                <segue destination="Cfj-J2-fCX" kind="show" identifier="toSetting" id="4q3-Na-2b1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,11 +230,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihc-8y-Lbb">
-                                <rect key="frame" x="156.5" y="563" width="101" height="31"/>
+                                <rect key="frame" x="156.5" y="574" width="101" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Результаты"/>
                                 <connections>
                                     <segue destination="ZxH-IC-HgO" kind="show" id="hAr-Fh-cOz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-0I-aIi">
+                                <rect key="frame" x="157" y="513" width="100" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Новая игра"/>
+                                <connections>
+                                    <action selector="newGame:" destination="foG-Hy-e8h" eventType="touchUpInside" id="ZtC-gh-EiN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,10 +252,12 @@
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="top" secondItem="jdj-7V-RlG" secondAttribute="top" constant="200" id="7Vp-aq-Pkz"/>
                             <constraint firstItem="zdJ-HF-xop" firstAttribute="leading" secondItem="jdj-7V-RlG" secondAttribute="leading" constant="50" id="8Lt-iM-rJJ"/>
                             <constraint firstItem="Ihc-8y-Lbb" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="JsB-lN-bFe"/>
-                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="top" secondItem="mkT-go-P5K" secondAttribute="bottom" constant="100" id="OXy-6p-n4v"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerY" secondItem="VmZ-jz-F22" secondAttribute="centerY" id="XjR-GZ-LF0"/>
                             <constraint firstItem="jdj-7V-RlG" firstAttribute="trailing" secondItem="zdJ-HF-xop" secondAttribute="trailing" constant="50" id="c5H-r8-ckP"/>
+                            <constraint firstItem="Ihc-8y-Lbb" firstAttribute="top" secondItem="ckB-0I-aIi" secondAttribute="bottom" constant="30" id="j6P-Wx-mWp"/>
+                            <constraint firstItem="ckB-0I-aIi" firstAttribute="top" secondItem="mkT-go-P5K" secondAttribute="bottom" constant="50" id="mOC-ko-0Nc"/>
                             <constraint firstItem="mkT-go-P5K" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="sHE-co-ISF"/>
+                            <constraint firstItem="ckB-0I-aIi" firstAttribute="centerX" secondItem="VmZ-jz-F22" secondAttribute="centerX" id="zmd-tG-1IT"/>
                         </constraints>
                     </view>
                     <connections>

@@ -24,4 +24,9 @@ class EndGameViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
+    @IBAction func newGame(_ sender: Any) {
+        Game.Shared.gameSession = GameSession()
+        Game.Shared.questionsProvider = QuestionsProvider()
+    }
+    
 }

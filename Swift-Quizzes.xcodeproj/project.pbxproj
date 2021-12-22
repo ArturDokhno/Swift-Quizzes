@@ -19,6 +19,11 @@
 		75692828276F84560029C34B /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75692827276F84560029C34B /* GameSession.swift */; };
 		7569282A276F8F700029C34B /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75692829276F8F700029C34B /* ResultsTableViewController.swift */; };
 		7569282C276F91EA0029C34B /* GameResultCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569282B276F91EA0029C34B /* GameResultCaretaker.swift */; };
+		75A890192773882200A34285 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A890182773882200A34285 /* SettingTableViewController.swift */; };
+		75B5FD0527736D2600A64F8D /* RandomQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0427736D2600A64F8D /* RandomQuestions.swift */; };
+		75B5FD0727736D5200A64F8D /* SequenceOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0627736D5200A64F8D /* SequenceOfQuestions.swift */; };
+		75B5FD0B27736DBE00A64F8D /* SeriasQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0A27736DBE00A64F8D /* SeriasQuestions.swift */; };
+		75B5FD0E27736EE600A64F8D /* QuestionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0D27736EE600A64F8D /* QuestionsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		75692827276F84560029C34B /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		75692829276F8F700029C34B /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		7569282B276F91EA0029C34B /* GameResultCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCaretaker.swift; sourceTree = "<group>"; };
+		75A890182773882200A34285 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		75B5FD0427736D2600A64F8D /* RandomQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestions.swift; sourceTree = "<group>"; };
+		75B5FD0627736D5200A64F8D /* SequenceOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOfQuestions.swift; sourceTree = "<group>"; };
+		75B5FD0A27736DBE00A64F8D /* SeriasQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriasQuestions.swift; sourceTree = "<group>"; };
+		75B5FD0D27736EE600A64F8D /* QuestionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,7 @@
 			children = (
 				752B8818276F57EA00FD3490 /* AppDelegate.swift */,
 				752B881A276F57EA00FD3490 /* SceneDelegate.swift */,
+				75B5FD0C27736ECF00A64F8D /* Helper */,
 				75692826276F84340029C34B /* Pattern */,
 				752B882F276F5F4100FD3490 /* Model */,
 				752B882E276F5F2900FD3490 /* Controller */,
@@ -88,6 +99,7 @@
 				752B882C276F59DD00FD3490 /* GameViewController.swift */,
 				752D5B55276F672E00B22F1D /* EndGameViewController.swift */,
 				75692829276F8F700029C34B /* ResultsTableViewController.swift */,
+				75A890182773882200A34285 /* SettingTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,10 +115,45 @@
 		75692826276F84340029C34B /* Pattern */ = {
 			isa = PBXGroup;
 			children = (
-				75692827276F84560029C34B /* GameSession.swift */,
-				7569282B276F91EA0029C34B /* GameResultCaretaker.swift */,
+				75B5FD0327736D0600A64F8D /* Strategy */,
+				75B5FD022773591B00A64F8D /* Memento */,
+				75B5FD012773590000A64F8D /* Singleton */,
 			);
 			path = Pattern;
+			sourceTree = "<group>";
+		};
+		75B5FD012773590000A64F8D /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				75692827276F84560029C34B /* GameSession.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		75B5FD022773591B00A64F8D /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				7569282B276F91EA0029C34B /* GameResultCaretaker.swift */,
+			);
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		75B5FD0327736D0600A64F8D /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				75B5FD0627736D5200A64F8D /* SequenceOfQuestions.swift */,
+				75B5FD0427736D2600A64F8D /* RandomQuestions.swift */,
+				75B5FD0A27736DBE00A64F8D /* SeriasQuestions.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		75B5FD0C27736ECF00A64F8D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				75B5FD0D27736EE600A64F8D /* QuestionsProvider.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,15 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A890192773882200A34285 /* SettingTableViewController.swift in Sources */,
 				7569282A276F8F700029C34B /* ResultsTableViewController.swift in Sources */,
 				752D5B54276F5FCD00B22F1D /* Question.swift in Sources */,
+				75B5FD0527736D2600A64F8D /* RandomQuestions.swift in Sources */,
 				752B882D276F59DD00FD3490 /* GameViewController.swift in Sources */,
 				752D5B56276F672E00B22F1D /* EndGameViewController.swift in Sources */,
 				752B881D276F57EA00FD3490 /* MainViewController.swift in Sources */,
+				75B5FD0B27736DBE00A64F8D /* SeriasQuestions.swift in Sources */,
 				75692828276F84560029C34B /* GameSession.swift in Sources */,
 				752B8819276F57EA00FD3490 /* AppDelegate.swift in Sources */,
 				7569282C276F91EA0029C34B /* GameResultCaretaker.swift in Sources */,
 				752B881B276F57EA00FD3490 /* SceneDelegate.swift in Sources */,
+				75B5FD0727736D5200A64F8D /* SequenceOfQuestions.swift in Sources */,
+				75B5FD0E27736EE600A64F8D /* QuestionsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
