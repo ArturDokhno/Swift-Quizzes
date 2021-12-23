@@ -8,7 +8,6 @@
 import Foundation
 
 class GameSession {
-    var answersCount = gameQuestions.count
     var rightAnswerCount = 0
     var gamePoint = Int()
 }

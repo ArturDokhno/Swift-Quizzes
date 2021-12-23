@@ -9,7 +9,9 @@ import UIKit
 
 class QuestionsProvider {
     
-    var questions: [Question] = gameQuestions
+    private var gameQuestions = GameQuestions()
+    
+    lazy var questions: [Question] = getQuestions()
     
     func getRemainQuestionsCount() -> Int {
         return questions.count
@@ -25,5 +27,15 @@ class QuestionsProvider {
     
     func getAnswerText(index: Int, number: Int) -> String {
         return questions[number].answers[index]
+    }
+    
+    func getQuestions() -> [Question] {
+        var question = gameQuestions.questionsCareTaker.getQuestion()
+        if question.isEmpty {
+            question = gameQuestions.gameQuestions
+            return question
+        } else {
+            return question
+        }
     }
 }

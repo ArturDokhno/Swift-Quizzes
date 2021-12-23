@@ -8,6 +8,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    private var gameQuestions = GameQuestions()
 
     @IBAction func playGame(_ sender: Any) {
         Game.Shared.gameSession = GameSession()

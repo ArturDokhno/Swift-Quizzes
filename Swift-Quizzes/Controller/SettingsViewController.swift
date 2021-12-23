@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SettingsDelegate: class {
+protocol SettingsDelegate: AnyObject {
     func setDifficult (sequence: Bool)
 }
 
