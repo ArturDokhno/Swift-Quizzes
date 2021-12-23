@@ -19,11 +19,11 @@
 		75692828276F84560029C34B /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75692827276F84560029C34B /* GameSession.swift */; };
 		7569282A276F8F700029C34B /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75692829276F8F700029C34B /* ResultsTableViewController.swift */; };
 		7569282C276F91EA0029C34B /* GameResultCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7569282B276F91EA0029C34B /* GameResultCaretaker.swift */; };
-		75A890192773882200A34285 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A890182773882200A34285 /* SettingTableViewController.swift */; };
 		75B5FD0527736D2600A64F8D /* RandomQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0427736D2600A64F8D /* RandomQuestions.swift */; };
 		75B5FD0727736D5200A64F8D /* SequenceOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0627736D5200A64F8D /* SequenceOfQuestions.swift */; };
 		75B5FD0B27736DBE00A64F8D /* SeriasQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0A27736DBE00A64F8D /* SeriasQuestions.swift */; };
 		75B5FD0E27736EE600A64F8D /* QuestionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B5FD0D27736EE600A64F8D /* QuestionsProvider.swift */; };
+		75C555C427747E98002A8C84 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C555C327747E98002A8C84 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +41,11 @@
 		75692827276F84560029C34B /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		75692829276F8F700029C34B /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		7569282B276F91EA0029C34B /* GameResultCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCaretaker.swift; sourceTree = "<group>"; };
-		75A890182773882200A34285 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		75B5FD0427736D2600A64F8D /* RandomQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestions.swift; sourceTree = "<group>"; };
 		75B5FD0627736D5200A64F8D /* SequenceOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOfQuestions.swift; sourceTree = "<group>"; };
 		75B5FD0A27736DBE00A64F8D /* SeriasQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriasQuestions.swift; sourceTree = "<group>"; };
 		75B5FD0D27736EE600A64F8D /* QuestionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsProvider.swift; sourceTree = "<group>"; };
+		75C555C327747E98002A8C84 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 				752B882C276F59DD00FD3490 /* GameViewController.swift */,
 				752D5B55276F672E00B22F1D /* EndGameViewController.swift */,
 				75692829276F8F700029C34B /* ResultsTableViewController.swift */,
-				75A890182773882200A34285 /* SettingTableViewController.swift */,
+				75C555C327747E98002A8C84 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -227,7 +227,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A890192773882200A34285 /* SettingTableViewController.swift in Sources */,
 				7569282A276F8F700029C34B /* ResultsTableViewController.swift in Sources */,
 				752D5B54276F5FCD00B22F1D /* Question.swift in Sources */,
 				75B5FD0527736D2600A64F8D /* RandomQuestions.swift in Sources */,
@@ -237,6 +236,7 @@
 				75B5FD0B27736DBE00A64F8D /* SeriasQuestions.swift in Sources */,
 				75692828276F84560029C34B /* GameSession.swift in Sources */,
 				752B8819276F57EA00FD3490 /* AppDelegate.swift in Sources */,
+				75C555C427747E98002A8C84 /* SettingsViewController.swift in Sources */,
 				7569282C276F91EA0029C34B /* GameResultCaretaker.swift in Sources */,
 				752B881B276F57EA00FD3490 /* SceneDelegate.swift in Sources */,
 				75B5FD0727736D5200A64F8D /* SequenceOfQuestions.swift in Sources */,

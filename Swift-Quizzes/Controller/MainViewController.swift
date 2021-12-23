@@ -19,8 +19,8 @@ class MainViewController: UIViewController {
             guard let vc = segue.destination as? GameViewController else { return }
             vc.gameDelegate = self
             vc.numberOfQuestionStrategy = Game.Shared.randomQuestions
-        } else if (segue.identifier == "toSetting") {
-            guard let vc = segue.destination as? SettingTableViewController else { return }
+        } else if segue.identifier == "toSetting" {
+            guard let vc = segue.destination as? SettingsViewController else { return }
             vc.settingsDelegate = self
         }
     }
@@ -37,8 +37,8 @@ extension MainViewController: GameDelegate {
 }
 
 extension MainViewController: SettingsDelegate {
-    func setDifficult(seuence: Bool) {
-        if seuence == true {
+    func setDifficult(sequence: Bool) {
+        if sequence == true {
             Game.Shared.randomQuestions = RandomQuestions()
         } else {
             Game.Shared.randomQuestions = SeriasQuestions()
