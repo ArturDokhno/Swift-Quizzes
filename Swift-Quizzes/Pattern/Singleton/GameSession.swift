@@ -8,7 +8,6 @@
 import Foundation
 
 class GameSession {
-    var answersCount = gameQuestions.count
     var rightAnswerCount = 0
     var gamePoint = Int()
 }
@@ -20,6 +19,8 @@ class Game {
     private let gameResultCaretaker = GameResultCaretaker()
     
     var gameSession = GameSession()
+    var questionsProvider = QuestionsProvider()
+    var randomQuestions: SequenceOfQuestions = RandomQuestions()
     
     private(set) var results: [GameResult] {
         didSet {
