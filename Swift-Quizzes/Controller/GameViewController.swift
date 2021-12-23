@@ -30,7 +30,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.setHidesBackButton(true, animated: false)
         createQuestions()
     }
     
@@ -42,7 +41,6 @@ class GameViewController: UIViewController {
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, points: gamePoint)
             Game.Shared.saveResult(result: gamePoint)
-            pushEndGameVC()
         }
     }
     
@@ -54,7 +52,6 @@ class GameViewController: UIViewController {
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, points: gamePoint)
             Game.Shared.saveResult(result: gamePoint)
-            pushEndGameVC()
         }
     }
     
@@ -66,7 +63,6 @@ class GameViewController: UIViewController {
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, points: gamePoint)
             Game.Shared.saveResult(result: gamePoint)
-            pushEndGameVC()
         }
     }
     
@@ -78,7 +74,6 @@ class GameViewController: UIViewController {
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, points: gamePoint)
             Game.Shared.saveResult(result: gamePoint)
-            pushEndGameVC()
         }
     }
     
@@ -94,24 +89,7 @@ class GameViewController: UIViewController {
             
             provider.questions.remove(at: questionNumber)
             
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(
-                withIdentifier: "EndGameViewController") as! EndGameViewController
-            vc.text = "Поздравляю вы выиграли!"
-            vc.resultText = "Вы заработали: \(gamePoint)"
-            Game.Shared.saveResult(result: gamePoint)
-            self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    func pushEndGameVC() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(
-            withIdentifier: "EndGameViewController") as! EndGameViewController
-        vc.text = "Вы проиграли!"
-        vc.resultText = "Вы заработали: \(gamePoint)"
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

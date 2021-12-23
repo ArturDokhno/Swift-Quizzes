@@ -66,6 +66,8 @@ class AddQuestionsViewController: UIViewController {
         
         game.gameQuestions.append(question)
         game.questionsCareTaker.saveQuestions(questions: game.gameQuestions)
+        
+        dismiss(animated: true)
     }
     
     func alert(title: String) {
